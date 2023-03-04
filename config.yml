@@ -1,0 +1,24 @@
+version: 2.1
+
+jobs:
+  say_hello:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: Printing_Hello
+          command: echo "Hello"
+  
+  say_world:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+        name: Printing_World 
+        command: echo "World!"
+
+workflows:
+  say_hello_world:
+    jobs:
+      - say_hello
+      - say_world
