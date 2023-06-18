@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   say_hello:
     docker:
-      - image: cimg/base:stable
+      - image: circleci/node:13.8.0
     steps:
       - run:
           name: Printing_Hello
@@ -11,11 +11,11 @@ jobs:
   
   say_world:
     docker:
-      - image: cimg/base:stable
+      - image: circleci/node:13.8.0
     steps:
       - run:
-        name: Printing_World 
-        command: echo "World!"
+          name: Printing_World 
+          command: echo "World!"
 
 workflows:
   say_hello_world:
