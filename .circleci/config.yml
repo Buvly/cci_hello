@@ -22,7 +22,7 @@ jobs:
     - image: circleci/node:13.8.0
     steps:
       - run: 
-          command: echo "My name is $My_Name"
+          command: echo "My name is $(My_Name)"
 
 workflows:
   say_hello_world:
