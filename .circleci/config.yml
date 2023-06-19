@@ -21,8 +21,9 @@ jobs:
     docker:
     - image: circleci/node:13.8.0
     steps:
+      - checkout
       - run: 
-          command: echo $My_Name
+          command: echo ${My_Name}
 
 workflows:
   say_hello_world:
