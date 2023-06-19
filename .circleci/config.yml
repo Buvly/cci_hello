@@ -28,4 +28,7 @@ workflows:
   say_hello_world:
     jobs:
       - say_hello
-      - say_world
+      - say_world:
+          requires: 
+            - say_hello
+      - printing_env_var
